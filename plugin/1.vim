@@ -15,18 +15,24 @@ filetype plugin indent on                   " Enable filetype-specific indenting
 
 syntax on                                   " syntax highlighting
 
-" Leader mappings
-let mapleader = ","                         " The leader character is like a vim modifier key
-
 set wildmenu                                " Make the command/file menu completion show more information
 set wildmode=list:longest                   " Make the completions window larger
 
 " Fuzzy Finder Settings
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
+
+" Leader mappings
+let mapleader = ","                         " The leader character is like a vim modifier key
 map <leader>f :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>r :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>
-
 map <leader>a :Ack<SPACE>
 map <leader>n :NERDTreeToggle<CR>
+map <leader>tl :TlistToggle<CR>
+
+" Custom key mappings
+" Pressing enter to add a newline after the cursor without entering insert mode
+map <CR> o<Esc>
+" Pressing S-enter to add a newline before the cursor without entering insert mode
+map <S-Enter> O<Esc>
