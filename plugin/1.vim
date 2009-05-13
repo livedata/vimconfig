@@ -29,10 +29,9 @@ map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>r :ruby finder.rescan!<CR>:FuzzyFinderRemoveCache<CR>
 map <leader>a :Ack<SPACE>
 map <leader>n :NERDTreeToggle<CR>
-map <leader>tl :TlistToggle<CR>
 
 " Custom key mappings
-" Pressing enter to add a newline after the cursor without entering insert mode
-map <CR> o<Esc>k
-" Pressing S-enter to add a newline before the cursor without entering insert mode
+" Pressing ctrl-enter to add a newline after the cursor without entering insert mode
+map <C-Enter> o<Esc>k
+" Pressing shift-enter to add a newline before the cursor without entering insert mode
 map <S-Enter> O<Esc>j
